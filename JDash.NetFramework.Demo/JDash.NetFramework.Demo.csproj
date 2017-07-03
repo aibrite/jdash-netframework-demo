@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{41B6F885-AD04-49EA-BFC2-E57393CFA797}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JDash.NetFramework.Demo</RootNamespace>
+    <AssemblyName>JDash.NetFramework.Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="JDash.NetFramework.Api, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JDash.NetFramework.Api.1.0.1\lib\JDash.NetFramework.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="JDash.NetFramework.Models, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JDash.NetFramework.Provider.MySQL.1.0.1\lib\JDash.NetFramework.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="JDash.NetFramework.Provider.MsSQL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JDash.NetFramework.Provider.MsSQL.1.0.1\lib\JDash.NetFramework.Provider.MsSQL.dll</HintPath>
+    </Reference>
+    <Reference Include="JDash.NetFramework.Provider.MySQL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\JDash.NetFramework.Provider.MySQL.1.0.1\lib\JDash.NetFramework.Provider.MySQL.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.7.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\JDash.NetFramework.Provider.MySQL.1.0.1\lib\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\JDash.NetFramework.Provider.MySQL.1.0.1\lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.Formatting.Extension.5.2.3.0\lib\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <HintPath>..\packages\System.Net.Http.2.0.20126.16343\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\JDash.NetFramework.Api.1.0.1\lib\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\JDash.NetFramework.Api.1.0.1\lib\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="JConfig.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\backgrounds\01d.jpg" />
+    <Content Include="assets\backgrounds\01n.jpg" />
+    <Content Include="assets\backgrounds\02d.jpg" />
+    <Content Include="assets\backgrounds\02n.jpg" />
+    <Content Include="assets\backgrounds\03d.jpg" />
+    <Content Include="assets\backgrounds\03n.jpg" />
+    <Content Include="assets\backgrounds\04d.jpg" />
+    <Content Include="assets\backgrounds\04n.jpg" />
+    <Content Include="assets\backgrounds\09d.jpg" />
+    <Content Include="assets\backgrounds\10d.jpg" />
+    <Content Include="assets\backgrounds\10n.jpg" />
+    <Content Include="assets\backgrounds\11d.jpg" />
+    <Content Include="assets\backgrounds\11n.jpg" />
+    <Content Include="assets\backgrounds\13d.jpg" />
+    <Content Include="assets\backgrounds\13n.jpg" />
+    <Content Include="assets\backgrounds\50d.jpg" />
+    <Content Include="assets\backgrounds\50n.jpg" />
+    <Content Include="assets\icons\01d.png" />
+    <Content Include="assets\icons\01n.png" />
+    <Content Include="assets\icons\02d.png" />
+    <Content Include="assets\icons\02n.png" />
+    <Content Include="assets\icons\03d.png" />
+    <Content Include="assets\icons\03n.png" />
+    <Content Include="assets\icons\04d.png" />
+    <Content Include="assets\icons\04n.png" />
+    <Content Include="assets\icons\09d.png" />
+    <Content Include="assets\icons\09n.png" />
+    <Content Include="assets\icons\10d.png" />
+    <Content Include="assets\icons\10n.png" />
+    <Content Include="assets\icons\11d.png" />
+    <Content Include="assets\icons\11n.png" />
+    <Content Include="assets\icons\13d.png" />
+    <Content Include="assets\icons\13n.png" />
+    <Content Include="assets\icons\50d.png" />
+    <Content Include="assets\icons\50n.png" />
+    <Content Include="assets\movie-background.jpg" />
+    <Content Include="assets\spinner.gif" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\jdash.jpg" />
+    <Content Include="demos\app.js" />
+    <Content Include="demos\bs\assets\css\animate.min.css" />
+    <Content Include="demos\bs\assets\css\bootstrap.min.css" />
+    <Content Include="demos\bs\assets\css\demo.css" />
+    <Content Include="demos\bs\assets\css\light-bootstrap-dashboard.css" />
+    <Content Include="demos\bs\assets\css\pe-icon-7-stroke.css" />
+    <Content Include="demos\bs\assets\fonts\Pe-icon-7-stroke.svg" />
+    <Content Include="demos\bs\assets\img\default-avatar.png" />
+    <Content Include="demos\bs\assets\img\loading-bubbles.svg" />
+    <Content Include="demos\bs\assets\img\mask.png" />
+    <Content Include="demos\bs\assets\img\sidebar-5.jpg" />
+    <Content Include="demos\bs\assets\js\bootstrap-notify.js" />
+    <Content Include="demos\bs\assets\js\bootstrap-select.js" />
+    <Content Include="demos\bs\assets\js\bootstrap.min.js" />
+    <Content Include="demos\bs\assets\js\demo.js" />
+    <Content Include="demos\bs\assets\js\jquery-1.10.2.js" />
+    <Content Include="demos\bs\assets\js\light-bootstrap-dashboard.js" />
+    <Content Include="demos\bs\custom.css" />
+    <Content Include="demos\bs\dashlets\chart-dashlet.html" />
+    <Content Include="demos\bs\dashlets\content-dashlet.html" />
+    <Content Include="demos\bs\dashlets\gauge-dashlet.html" />
+    <Content Include="demos\bs\dashlets\google-dashlet.html" />
+    <Content Include="demos\bs\dashlets\hello-world.html" />
+    <Content Include="demos\bs\dashlets\locationmap-dashlet.html" />
+    <Content Include="demos\bs\dashlets\movie-dashlet.html" />
+    <Content Include="demos\bs\dashlets\nasa-apod.html" />
+    <Content Include="demos\bs\dashlets\news-dashlet.html" />
+    <Content Include="demos\bs\dashlets\rich-content.html" />
+    <Content Include="demos\bs\dashlets\rss-dashlet.html" />
+    <Content Include="demos\bs\dashlets\stock-dashlet.html" />
+    <Content Include="demos\bs\dashlets\stockquote-dashlet.html" />
+    <Content Include="demos\bs\dashlets\weather-dashlet.html" />
+    <Content Include="demos\bs\index.html" />
+    <Content Include="demos\bs\index.js" />
+    <Content Include="demos\jdash\app.css" />
+    <Content Include="demos\jdash\dashlets\chart-dashlet.html" />
+    <Content Include="demos\jdash\dashlets\content-dashlet.html" />
+    <Content Include="demos\jdash\dashlets\gauge-dashlet.html" />
+    <Content Include="demos\jdash\dashlets\google-dashlet.html" />
+    <Content Include="demos\jdash\dashlets\hello-world.html" />
+    <Content Include="demos\jdash\dashlets\locationmap-dashlet.html" />
+    <Content Include="demos\jdash\dashlets\movie-dashlet.html" />
+    <Content Include="demos\jdash\dashlets\nasa-apod.html" />
+    <Content Include="demos\jdash\dashlets\news-dashlet.html" />
+    <Content Include="demos\jdash\dashlets\rich-content.html" />
+    <Content Include="demos\jdash\dashlets\rss-dashlet.html" />
+    <Content Include="demos\jdash\dashlets\stock-dashlet.html" />
+    <Content Include="demos\jdash\dashlets\stockquote-dashlet.html" />
+    <Content Include="demos\jdash\dashlets\weather-dashlet.html" />
+    <Content Include="demos\jdash\index.html" />
+    <Content Include="demos\jdash\index.js" />
+    <Content Include="demos\material\index.html" />
+    <Content Include="demos\material\index.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="index.html" />
+    <Content Include="node_modules\jdash-ui\dist\components\bs.html" />
+    <Content Include="node_modules\jdash-ui\dist\components\jdash.css" />
+    <Content Include="node_modules\jdash-ui\dist\components\jdash.html" />
+    <Content Include="node_modules\jdash-ui\dist\fonts\fontawesome-webfont.svg" />
+    <Content Include="node_modules\jdash-ui\dist\jdash.min.js" />
+    <Content Include="node_modules\jdash-ui\dist\jdash.native.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="demos\bs\assets\fonts\Pe-icon-7-stroke.eot" />
+    <Content Include="demos\bs\assets\fonts\Pe-icon-7-stroke.ttf" />
+    <Content Include="demos\bs\assets\fonts\Pe-icon-7-stroke.woff" />
+    <Content Include="demos\bs\assets\sass\lbd\mixins\_buttons.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\mixins\_cards.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\mixins\_chartist.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\mixins\_icons.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\mixins\_inputs.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\mixins\_labels.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\mixins\_morphing-buttons.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\mixins\_navbars.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\mixins\_social-buttons.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\mixins\_tabs.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\mixins\_transparency.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\mixins\_vendor-prefixes.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_alerts.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_buttons.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_cards.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_chartist.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_checkbox-radio-switch.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_dropdown.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_footers.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_inputs.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_misc.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_mixins.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_navbars.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_responsive.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_sidebar-and-main-panel.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_tables.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_typography.scss" />
+    <Content Include="demos\bs\assets\sass\lbd\_variables.scss" />
+    <Content Include="demos\bs\assets\sass\light-bootstrap-dashboard.scss" />
+    <Content Include="node_modules\jdash-ui\.npmignore" />
+    <Content Include="node_modules\jdash-ui\dist\fonts\fontawesome-webfont.eot" />
+    <Content Include="node_modules\jdash-ui\dist\fonts\fontawesome-webfont.ttf" />
+    <Content Include="node_modules\jdash-ui\dist\fonts\fontawesome-webfont.woff" />
+    <Content Include="node_modules\jdash-ui\dist\fonts\fontawesome-webfont.woff2" />
+    <Content Include="node_modules\jdash-ui\dist\fonts\FontAwesome.otf" />
+    <Content Include="node_modules\jdash-ui\license.md" />
+    <Content Include="node_modules\jdash-ui\package.json" />
+    <Content Include="node_modules\jdash-ui\push.sh" />
+    <Content Include="node_modules\jdash-ui\README.md" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>34672</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:34672/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
